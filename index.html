@@ -1,0 +1,102 @@
+<html>
+    <head>
+        <title>BDO Enhance Cost Calculator</title>
+        <link rel="icon" type="image/x-icon" href="images/icon.png">
+    </head>
+    <body>
+        <h1>BDO Enhance Cost Calculator</h1>
+        <div>
+            <div>
+                <button id='accessoryButton' class="selectButton selected">Accessory</button>
+                <button id='gearButton' class="selectButton">Gear</button>
+            </div>
+            <select id="gearSelect">
+
+            </select>
+
+            <div class="w-1/3">
+                <h2> Market Prices </h2>
+                <div class="grid grid-cols-2">
+                    <label for="baseM">Base: </label>
+                    <input type="number" id="baseM"></input>
+
+                    <label for="priM">PRI: </label>
+                    <input type="number" id="priM"></input>
+
+                    <label for="duoM">DUO: </label>
+                    <input type="number" id="duoM"></input>
+
+                    <label for="triM">TRI: </label>
+                    <input type="number" id="triM"></input>
+
+                    <label for="tetM">TET: </label>
+                    <input type="number" id="tetM"></input>
+
+                    <label for="penM">PEN: </label>
+                    <input type="number" id="penM"></input>
+
+                    <label for="outfitM">Outfit Box: </label>
+                    <input type="number" id="outfitM"></input>
+
+                    <label for="premiumM">Premium Outfit Box: </label>
+                    <input type="number" id="premiumM"></input>
+                </div>
+
+                <h2> Failstacks Used </h2>
+                <div class="grid grid-cols-3">
+                    <label for="baseF">Base: </label>
+                    <input type="number" id="baseF"></input>
+                    <span></span>
+
+                    <label for="priF">PRI: </label>
+                    <input type="number" id="priF"></input>
+                    <p><span id="priC"></span>%</p>
+
+                    <label for="duoF">DUO: </label>
+                    <input type="number" id="duoF"></input>
+                    <p><span id="duoC"></span>%</p>
+
+                    <label for="triF">TRI: </label>
+                    <input type="number" id="triF"></input>
+                    <p><span id="triC"></span>%</p>
+
+                    <label for="tetF">TET: </label>
+                    <input type="number" id="tetF"></input>
+                    <p><span id="tetC"></span>%</p>
+
+                    <label for="penF">PEN: </label>
+                    <input type="number" id="penF"></input>
+                    <p><span id="penC"></span>%</p>
+                </div>  
+            </div>
+
+            <div class="w-full">
+                <h2>Best Prices</h2>
+                <div class="grid grid-cols-3">
+                    <label for="priP">PRI: </label>
+                    <p id="priP"></p>
+                    <p id="priMeth"></p>
+                    
+                    <label for="duoP">DUO: </label>
+                    <p id="duoP"></p>
+                    <p id="duoMeth"></p>
+                    
+                    <label for="triP">TRI: </label>
+                    <p id="triP"></p>
+                    <p id="triMeth"></p>
+                    
+                    <label for="tetP">TET: </label>
+                    <p id="tetP"></p>
+                    <p id="tetMethod"></p>
+                    
+                    <label for="penP">PEN: </label>
+                    <p id="penP"></p>
+                    <p id="penMethod"></p>
+                    
+                </div>
+            </div>
+        </div>
+    </body>
+    <script src="formulas.js"></script>
+    <script src="main.js"></script>
+</html>
