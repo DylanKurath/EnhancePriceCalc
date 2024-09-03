@@ -14,84 +14,91 @@
 
             </select>
 
+            <label for="noBuyPen">Don't Buy PENs</label>
+            <input id="noBuyPen" type="checkbox"></input>
+
             <div class="w-1/3">
                 <h2> Market Prices </h2>
                 <div class="grid grid-cols-2">
-                    <label for="baseM">Base: </label>
-                    <input type="number" id="baseM"></input>
+                    <label for="market0">Base: </label>
+                    <input type="number" id="market0"></input>
 
-                    <label for="priM">PRI: </label>
-                    <input type="number" id="priM"></input>
+                    <label for="market1">PRI: </label>
+                    <input type="number" id="market1"></input>
 
-                    <label for="duoM">DUO: </label>
-                    <input type="number" id="duoM"></input>
+                    <label for="market2">DUO: </label>
+                    <input type="number" id="market2"></input>
 
-                    <label for="triM">TRI: </label>
-                    <input type="number" id="triM"></input>
+                    <label for="market3">TRI: </label>
+                    <input type="number" id="market3"></input>
 
-                    <label for="tetM">TET: </label>
-                    <input type="number" id="tetM"></input>
+                    <label for="market4">TET: </label>
+                    <input type="number" id="market4"></input>
 
-                    <label for="penM">PEN: </label>
-                    <input type="number" id="penM"></input>
+                    <label for="market5">PEN: </label>
+                    <input type="number" id="market5"></input>
 
-                    <label for="outfitM">Outfit Box: </label>
-                    <input type="number" id="outfitM"></input>
+                    <label for="market6">Vendor Crons: </label>
+                    <input type="number" id="market6" value="3000000"></input>
 
-                    <label for="premiumM">Premium Outfit Box: </label>
-                    <input type="number" id="premiumM"></input>
+                    <label for="market7">Premium Outfit Box: </label>
+                    <input type="number" id="market7" value="2170000000"></input>
+
+                    <label for="cronPrice">Cron Price</label>
+                    <p><span id='cronPrice'></span> <span id="cronMethod"></span></p>
+
+                    <label for="market8">J's Hammer of Precision Price: </label>
+                    <input type="number" id="market8" value="27500000000"></input>
                 </div>
+
+
 
                 <h2> Failstacks Used </h2>
                 <div class="grid grid-cols-3">
-                    <label for="baseF">Base: </label>
-                    <input type="number" id="baseF"></input>
-                    <span></span>
+                    <label for="failstack1">PRI: </label>
+                    <input type="number" id="failstack1" value="20"></input>
+                    <p><span id="chance1"></span>%</p>
 
-                    <label for="priF">PRI: </label>
-                    <input type="number" id="priF"></input>
-                    <p><span id="priC"></span>%</p>
+                    <label for="failstack2">DUO: </label>
+                    <input type="number" id="failstack2" value="30"></input>
+                    <p><span id="chance2"></span>%</p>
 
-                    <label for="duoF">DUO: </label>
-                    <input type="number" id="duoF"></input>
-                    <p><span id="duoC"></span>%</p>
+                    <label for="failstack3">TRI: </label>
+                    <input type="number" id="failstack3" value="50"></input>
+                    <p><span id="chance3"></span>%</p>
 
-                    <label for="triF">TRI: </label>
-                    <input type="number" id="triF"></input>
-                    <p><span id="triC"></span>%</p>
+                    <label for="failstack4">TET: </label>
+                    <input type="number" id="failstack4" value="100"></input>
+                    <p><span id="chance4"></span>%</p>
 
-                    <label for="tetF">TET: </label>
-                    <input type="number" id="tetF"></input>
-                    <p><span id="tetC"></span>%</p>
-
-                    <label for="penF">PEN: </label>
-                    <input type="number" id="penF"></input>
-                    <p><span id="penC"></span>%</p>
+                    <label for="failstack5">PEN: </label>
+                    <input type="number" id="failstack5" value="200"></input>
+                    <p><span id="chance5"></span>%</p>
                 </div>  
             </div>
 
             <div class="w-full">
                 <h2>Best Prices</h2>
                 <div class="grid grid-cols-3">
-                    <label for="priP">PRI: </label>
-                    <p id="priP"></p>
-                    <p id="priMeth"></p>
+                    <label for="price1">PRI: </label>
+                    <p id="price1"></p>
+                    <p id="method1"></p>
                     
-                    <label for="duoP">DUO: </label>
-                    <p id="duoP"></p>
-                    <p id="duoMeth"></p>
+                    <label for="price2">DUO: </label>
+                    <p id="price2"></p>
+                    <p id="method2"></p>
                     
-                    <label for="triP">TRI: </label>
-                    <p id="triP"></p>
-                    <p id="triMeth"></p>
+                    <label for="price3">TRI: </label>
+                    <p id="price3"></p>
+                    <p id="method3"></p>
                     
-                    <label for="tetP">TET: </label>
-                    <p id="tetP"></p>
-                    <p id="tetMethod"></p>
+                    <label for="price4">TET: </label>
+                    <p id="price4"></p>
+                    <p id="method4"></p>
                     
-                    <label for="penP">PEN: </label>
-                    <p id="penP"></p>
-                    <p id="penMethod"></p>
+                    <label for="price5">PEN: </label>
+                    <p id="price5"></p>
+                    <p id="method5"></p>
                     
                 </div>
             </div>
