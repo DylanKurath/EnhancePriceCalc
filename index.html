@@ -2,104 +2,130 @@
     <head>
         <title>BDO Enhance Cost Calculator</title>
         <link rel="icon" type="image/x-icon" href="images/icon.png">
+        <link href="./tailwindOutput.css" rel="stylesheet">
     </head>
-    <body>
-        <h1>BDO Enhance Cost Calculator</h1>
-        <div>
-            <div>
-                <button id='accessoryButton' class="selectButton selected">Accessory</button>
-                <button id='gearButton' class="selectButton">Gear</button>
-            </div>
-            <select id="gearSelect">
-
-            </select>
-
-            <label for="noBuyPen">Don't Buy PENs</label>
-            <input id="noBuyPen" type="checkbox"></input>
-
-            <div class="w-1/3">
-                <h2> Market Prices </h2>
-                <div class="grid grid-cols-2">
-                    <label for="market0">Base: </label>
-                    <input type="number" id="market0"></input>
-
-                    <label for="market1">PRI: </label>
-                    <input type="number" id="market1"></input>
-
-                    <label for="market2">DUO: </label>
-                    <input type="number" id="market2"></input>
-
-                    <label for="market3">TRI: </label>
-                    <input type="number" id="market3"></input>
-
-                    <label for="market4">TET: </label>
-                    <input type="number" id="market4"></input>
-
-                    <label for="market5">PEN: </label>
-                    <input type="number" id="market5"></input>
-
-                    <label for="market6">Vendor Crons: </label>
-                    <input type="number" id="market6" value="3000000"></input>
-
-                    <label for="market7">Premium Outfit Box: </label>
-                    <input type="number" id="market7" value="2170000000"></input>
-
-                    <label for="cronPrice">Cron Price</label>
-                    <p><span id='cronPrice'></span> <span id="cronMethod"></span></p>
-
-                    <label for="market8">J's Hammer of Precision Price: </label>
-                    <input type="number" id="market8" value="27500000000"></input>
+    <body class="bg-gray-700 text-white px-10 pt-5">
+        <div class="w-fit mx-auto">
+            <h1 class="text-5xl font-bold mx-auto w-fit">BDO Enhance Cost Calculator</h1>
+            <div class="flex flex-col">
+                <div class="mx-auto flex gap-4 w-fit m-4">
+                    <button id='accessoryButton' class="selectButton selected w-32 bg-gray-600 hover:bg-gray-800 rounded p-4 font-bold">Accessory</button>
+                    <button id='gearButton' class="selectButton w-32 bg-gray-600 hover:bg-gray-800 rounded p-4 font-bold">Gear</button>
                 </div>
+                <select id="gearSelect" class="bg-gray-600 w-fit mx-auto">
 
-
-
-                <h2> Failstacks Used </h2>
-                <div class="grid grid-cols-3">
-                    <label for="failstack1">PRI: </label>
-                    <input type="number" id="failstack1" value="20"></input>
-                    <p><span id="chance1"></span>%</p>
-
-                    <label for="failstack2">DUO: </label>
-                    <input type="number" id="failstack2" value="30"></input>
-                    <p><span id="chance2"></span>%</p>
-
-                    <label for="failstack3">TRI: </label>
-                    <input type="number" id="failstack3" value="50"></input>
-                    <p><span id="chance3"></span>%</p>
-
-                    <label for="failstack4">TET: </label>
-                    <input type="number" id="failstack4" value="100"></input>
-                    <p><span id="chance4"></span>%</p>
-
-                    <label for="failstack5">PEN: </label>
-                    <input type="number" id="failstack5" value="200"></input>
-                    <p><span id="chance5"></span>%</p>
-                </div>  
+                </select>
+                <div class="flex mx-auto mt-4">
+                    <label for="noBuyPen" class="mr-4 font-bold">Don't Buy PENs</label>
+                    <input id="noBuyPen" type="checkbox"></input>
+                </div>
+            </div>
+        </div>
+        <div class="grid grid-cols-3 gap-10 mt-10">
+            <div>
+                <h2 class="font-bold text-2xl"> Market Prices </h2>
+                <div class="flex flex-col">
+                    <div class="grid grid-cols-2 mt-2">
+                        <label for="market0" class="font-bold">Base: </label>
+                        <input type="number" id="market0" class="bg-gray-600 right-0"></input>
+                    </div>
+                    <div class="grid grid-cols-2 mt-2">
+                        <label for="market1" class="font-bold">PRI: </label>
+                        <input type="number" id="market1" class="bg-gray-600"></input>
+                    </div>
+                    <div class="grid grid-cols-2 mt-2">
+                        <label for="market2" class="font-bold">DUO: </label>
+                        <input type="number" id="market2" class="bg-gray-600"></input>
+                    </div>
+                    <div class="grid grid-cols-2 mt-2">
+                        <label for="market3" class="font-bold">TRI: </label>
+                        <input type="number" id="market3" class="bg-gray-600"></input>
+                    </div>
+                    <div class="grid grid-cols-2 mt-2">
+                        <label for="market4" class="font-bold">TET: </label>
+                        <input type="number" id="market4" class="bg-gray-600"></input>
+                    </div>
+                    <div class="grid grid-cols-2 mt-2">
+                        <label for="market5" class="font-bold">PEN: </label>
+                        <input type="number" id="market5" class="bg-gray-600"></input>
+                    </div>
+                    <div class="grid grid-cols-2 mt-2">
+                        <label for="market6" class="font-bold">Vendor Crons: </label>
+                        <input type="number" id="market6" value="3000000" class="bg-gray-600"></input>
+                    </div>
+                    <div class="grid grid-cols-2 mt-2">
+                        <label for="market7" class="font-bold">Premium Outfit Box: </label>
+                        <input type="number" id="market7" value="2170000000" class="bg-gray-600"></input>
+                    </div>
+                    <div class="grid grid-cols-2 mt-2">
+                        <label for="cronPrice" class="font-bold">Cron Price</label>
+                        <p><span id='cronPrice'></span> <span id="cronMethod"></span></p>
+                    </div>
+                    <div class="grid grid-cols-2 mt-2">
+                        <label for="market8" class="font-bold">J's Hammer of Precision Price: </label>
+                        <input type="number" id="market8" value="27500000000" class="bg-gray-600"></input>
+                    </div>
+                </div>
             </div>
 
-            <div class="w-full">
-                <h2>Best Prices</h2>
-                <div class="grid grid-cols-3">
-                    <label for="price1">PRI: </label>
-                    <p id="price1"></p>
-                    <p id="method1"></p>
-                    
-                    <label for="price2">DUO: </label>
-                    <p id="price2"></p>
-                    <p id="method2"></p>
-                    
-                    <label for="price3">TRI: </label>
-                    <p id="price3"></p>
-                    <p id="method3"></p>
-                    
-                    <label for="price4">TET: </label>
-                    <p id="price4"></p>
-                    <p id="method4"></p>
-                    
-                    <label for="price5">PEN: </label>
-                    <p id="price5"></p>
-                    <p id="method5"></p>
-                    
+            <div>
+                <h2 class="font-bold text-2xl"> Failstacks Used </h2>
+                <div class="flex flex-col">
+                    <div class="grid grid-cols-3 mt-2">
+                        <label for="failstack1" class="font-bold">PRI: </label>
+                        <input type="number" id="failstack1" value="20" class="bg-gray-600"></input>
+                        <p class="ml-4"><span id="chance1"></span>%</p>
+                    </div>
+                    <div class="grid grid-cols-3 mt-2">
+                        <label for="failstack2" class="font-bold">DUO: </label>
+                        <input type="number" id="failstack2" value="30" class="bg-gray-600"></input>
+                        <p class="ml-4"><span id="chance2"></span>%</p>
+                    </div>
+                    <div class="grid grid-cols-3 mt-2">
+                        <label for="failstack3" class="font-bold">TRI: </label>
+                        <input type="number" id="failstack3" value="50" class="bg-gray-600"></input>
+                        <p class="ml-4"><span id="chance3"></span>%</p>
+                    </div>
+                    <div class="grid grid-cols-3 mt-2">
+                        <label for="failstack4" class="font-bold">TET: </label>
+                        <input type="number" id="failstack4" value="100" class="bg-gray-600"></input>
+                        <p class="ml-4"><span id="chance4"></span>%</p>
+                    </div>
+                    <div class="grid grid-cols-3  mt-2">
+                        <label for="failstack5" class="font-bold">PEN: </label>
+                        <input type="number" id="failstack5" value="200" class="bg-gray-600"></input>
+                        <p class="ml-4"><span id="chance5"></span>%</p>
+                    </div>  
+                </div>
+            </div>
+            <div>
+                <h2 class="font-bold text-2xl">Best Prices</h2>
+                <div class="flex flex-col">
+                    <div class="flex mt-2">
+                        <label for="price1" class="font-bold">PRI: </label>
+                        <p id="price1"></p>
+                        <p id="method1"></p>
+                    </div>
+                    <div class="flex mt-2">
+                        <label for="price2" class="font-bold">DUO: </label>
+                        <p id="price2"></p>
+                        <p id="method2"></p>
+                    </div>
+                    <div class="flex mt-2">
+                        <label for="price3" class="font-bold">TRI: </label>
+                        <p id="price3"></p>
+                        <p id="method3"></p>
+                    </div>
+                    <div class="flex mt-2">
+                        <label for="price4" class="font-bold">TET: </label>
+                        <p id="price4"></p>
+                        <p id="method4"></p>
+                    </div>
+                    <div class="flex mt-2">
+                        <label for="price5" class="font-bold">PEN: </label>
+                        <p id="price5"></p>
+                        <p id="method5"></p>
+                    </div>
                 </div>
             </div>
         </div>
