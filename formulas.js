@@ -1,10 +1,10 @@
 
 // Calculate the success chance for a give enhance and failstack
 function chanceFromFailstackAccessory(level, failstack) {
-    let baseChances = [30, 10, 7.5, 2.5, 0.5]; // chance at 0 stacks
-    let growthRates = [3, 1, 0.75, 0.25, 0.05]; // bonus chance per stack
-    let softcaps = [14, 40, 45, 110, 490]; // failstack softcap
-    let softcapGrowthRates = [0.6, 0.2, 0.15, 0.05, 0.01]; // bonus chance per stack after softcap
+    let baseChances = [25, 10, 7.5, 2.5, 0.5]; // chance at 0 stacks
+    let growthRates = [2.5, 1, 0.75, 0.25, 0.05]; // bonus chance per stack
+    let softcaps = [18, 40, 44, 110, 490]; // failstack softcap
+    let softcapGrowthRates = [0.5, 0.2, 0.15, 0.05, 0.01]; // bonus chance per stack after softcap
 
     // select values for current enhance level
     let bc = baseChances[level - 1];
