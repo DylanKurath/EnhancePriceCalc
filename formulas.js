@@ -1,16 +1,16 @@
+const accessoryBaseChances = [25, 10, 7.5, 2.5, 0.5] // chance at 0 stacks
+const accesoryGrowthRates = [2.5, 1, 0.75, 0.25, 0.05]; // bonus chance per stack
+const accesorySoftcaps = [18, 40, 44, 110, 490]; // failstack softcap
+const accesorySoftcapGrowthRates = [0.5, 0.2, 0.15, 0.05, 0.01]; // bonus chance per stack after softcap
+const accessoryPityAmounts = [5, 6, 8, 10, 20] // agris anvil cap
 
 // Calculate the success chance for a give enhance and failstack
 function chanceFromFailstackAccessory(level, failstack) {
-    let baseChances = [25, 10, 7.5, 2.5, 0.5]; // chance at 0 stacks
-    let growthRates = [2.5, 1, 0.75, 0.25, 0.05]; // bonus chance per stack
-    let softcaps = [18, 40, 44, 110, 490]; // failstack softcap
-    let softcapGrowthRates = [0.5, 0.2, 0.15, 0.05, 0.01]; // bonus chance per stack after softcap
-
     // select values for current enhance level
-    let bc = baseChances[level - 1];
-    let gr = growthRates[level - 1];
-    let sc = softcaps[level - 1];
-    let scgr = softcapGrowthRates[level - 1];
+    let bc = accessoryBaseChances[level - 1];
+    let gr = accesoryGrowthRates[level - 1];
+    let sc = accesorySoftcaps[level - 1];
+    let scgr = accesorySoftcapGrowthRates[level - 1];
 
     // you can probably figure this out
     let finalChance = (bc + Math.min(failstack, sc) * gr + Math.max(failstack - sc, 0) * scgr) / 100;
